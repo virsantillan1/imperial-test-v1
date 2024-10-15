@@ -98,6 +98,7 @@
   font-family: "IBM Plex Sans", system-ui;
   font-weight: 300;
   font-style: normal;
+  line-height: 1.7rem;
 }
 
 .ibm-plex-sans-regular {
@@ -179,69 +180,6 @@
   }
 }
 
-    /* Estilo personalizado */
-    .product-card {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 80px;
-      margin-top: 1rem;
-      margin-bottom: 3rem;
-      background-color: white;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      background-image: url(../assets/img/bg-productos.jpg);
-    }
-
-    .product-card img {
-      max-width: 100%;
-      max-height: 300px;
-      object-fit: cover;
-      border-radius: 10px;
-    }
-
-    .carousel-indicators {
-      position: relative;
-      margin-top: 5rem;
-      margin-bottom: 8rem;
-    }
-
-    .carousel-indicators li {
-      width: 9px;
-      height: 9px;
-      border-radius: 50%;
-      margin-left: 0.8rem;
-      margin-right: 0.8rem;
-      background-color: #888;
-    }
-
-    .carousel-indicators .active {
-      background-color: #000;
-    }
-
-    .car-title {
-      color: #101828;
-      font-size: 2.3rem;
-    }
-
-    .left-section {
-      max-width: 300px;
-    }
-
-    .right-section {
-      text-align: right;
-      color: #836733;
-    }
-
-    .right-section a {
-      color: #007bff;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    .right-section a:hover {
-      text-decoration: underline;
-    }
 
 body {
   margin: 0;
@@ -268,7 +206,7 @@ h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
   margin-top: 0;
   margin-bottom: 0.5rem;
   font-family: "IBMPlexSans", sans-serif;
-  font-weight: 800;
+  font-weight: 750;
   line-height: 1.2;
   color: white;
 }
@@ -645,6 +583,747 @@ progress {
   color: #1F1E21;
 }
 
+    /* Estilo personalizado VIR */
+     /* Estilo de la línea horizontal degradada */
+     .gradient-line {
+      width: 80%;
+      height: 2px;
+      background: linear-gradient(90deg, #A08044, #a080444d); /* Cambiar los colores del degradado según necesites */
+      margin: 20px 0;
+    }
+
+    /* Estilo de la columna de la derecha */
+    .right-column {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .right-column h2 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    .right-column p {
+      font-size: 1rem;
+      margin-bottom: 20px;
+      color: white;
+    }
+
+    /* Estilos responsive para pantallas pequeñas */
+    @media (max-width: 768px) {
+      .row {
+        flex-direction: column; /* Las columnas se apilan verticalmente */
+      }
+
+      .gradient-line {
+        margin: 20px auto; /* Centrar la línea en pantallas pequeñas */
+      }
+    }
+
+    #features {
+      padding-top: 3rem;
+      padding-bottom: 5rem;
+    }
+
+    .product-card {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 110px;
+      margin-top: 1rem;
+      margin-bottom: 5rem;
+      background-color: white;
+      border-radius: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      background-image: url(../assets/img/bg-productos.jpg);
+      border: 2px solid #e4bd73 ;
+    }
+
+    .product-card img {
+      max-width: 100%;
+      max-height: 300px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .carousel-indicators {
+      position: relative;
+      margin-top: 5rem;
+      margin-bottom: 8rem;
+    }
+
+    .carousel-indicators li {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      margin-left: 0.8rem;
+      margin-right: 0.8rem;
+      background-color: #888;
+    }
+
+    .carousel-indicators .active {
+      background-color: #000;
+    }
+
+    .car-title {
+      color: #101828;
+      font-size: 2.3rem;
+    }
+
+    .left-section {
+      max-width: 300px;
+    }
+
+    .right-section {
+      text-align: right;
+      color: #836733;
+    }
+
+    .right-section a {
+      color: #007bff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .right-section a:hover {
+      text-decoration: underline;
+    }
+
+        /* Ajustes de tamaño para móvil */
+        @media (max-width: 768px) {
+          .product-card {
+            padding: 10px;
+            flex-direction: column;
+            text-align: center;
+          }
+          
+          .product-card img {
+            max-height: 250px;
+          }
+          
+          .right-section {
+            text-align: center;
+            margin-top: 10px;
+          }
+
+          .center-section {
+            margin-top: 2rem;
+          }
+          
+          #features {
+            padding-top: 1rem;
+          }
+        }
+
+
+    /* Estilos para las franjas */
+    .franja-container {
+      position: relative;
+      width: 100%;
+      height: 13rem; /* Puedes ajustar la altura según tus necesidades */
+      overflow: hidden;
+    }
+
+    .franja-container-prod {
+      position: relative;
+      width: 100%;
+      height: 6rem; /* Puedes ajustar la altura según tus necesidades */
+      overflow: hidden;
+    }
+
+    .franja {
+      position: absolute;
+      width: 120%;
+      height: 4.5rem;
+      left: -10%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 24px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      text-align: left;
+      color: #F3D290;
+    }
+
+    .franja-bot {
+      position: absolute;
+      width: 120%;
+      height: 4.5rem;
+      left: -10%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 24px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      text-align: right;
+      color: #F3D290;
+      margin-top: 5rem;
+    }
+
+
+    /* Franja 1 - fondo con texto repetido */
+    .franja-1 {
+      background: white;
+      border: 1px solid #F3D290; /* Añadimos el borde con un color transparente para evitar deformaciones */
+      box-sizing: border-box; /* Asegura que el borde no afecte al tamaño de la franja */
+      top: 20px;
+      text-overflow: clip;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+
+    /* Franja 2 - fondo con texto repetido */
+    .franja-2 {
+      background: white;
+      border: 1px solid #F3D290; /* Añadimos el borde con un color transparente para evitar deformaciones */
+      box-sizing: border-box; /* Asegura que el borde no afecte al tamaño de la franja */
+      transform: rotate(2deg); /* Ángulo de inclinación */
+      top: 0px;
+      text-overflow: clip;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+
+        /* Franja 3 - fondo con texto repetido */
+    .franja-3 {
+      background: white;
+      border: 1px solid #F3D290; /* Añadimos el borde con un color transparente para evitar deformaciones */
+      box-sizing: border-box; /* Asegura que el borde no afecte al tamaño de la franja */
+      top: 0px;
+      text-overflow: clip;
+      overflow: hidden;
+      white-space: nowrap;
+      transform: rotate(-2deg); /* Ángulo de inclinación */
+    }
+  
+    .franja span {
+      display: inline-block;
+      animation: scroll-text 30s linear infinite;
+    }
+
+    .franja-bot span {
+      display: inline-block;
+      animation: scroll-text-bot 30s linear infinite;
+    }
+
+
+    
+        /* Animación para hacer que el texto se desplace horizontalmente */
+        @keyframes scroll-text {
+          0% {
+            transform: translateX(0);
+          }
+          100% {
+            transform: translateX(-50%);
+          }
+        }
+
+        @keyframes scroll-text-bot {
+          0% {
+            transform: translateX(0%);
+          }
+          100% {
+            transform: translateX(50%);
+          }
+        }
+
+            /* Ajustes responsive */
+    @media (max-width: 768px) {
+      .franja {
+        height: 6rem; /* Reducimos el alto de las franjas */
+        font-size: 18px; /* Disminuimos el tamaño del texto */
+        width: 130%; /* Aumentamos el ancho para mantener el cruce en pantallas pequeñas */
+        left: -15%; /* Ajustamos la posición para que se vea mejor en pantallas pequeñas */
+      }
+
+      .franja-1 {
+        top: 10px; /* Cambiamos la posición en pantallas pequeñas */
+        transform: rotate(-1deg); /* Reducimos la inclinación */
+        text-overflow: clip;
+        overflow: hidden;
+        white-space: nowrap;
+
+      }
+
+      .franja-2 {
+        top: 50px; /* Cambiamos la posición en pantallas pequeñas */
+        transform: rotate(1deg); /* Reducimos la inclinación */
+        text-overflow: clip;
+        overflow: hidden;
+        white-space: nowrap;
+
+      }
+    }
+
+    /* Para pantallas muy pequeñas, como teléfonos móviles */
+    @media (max-width: 480px) {
+      .franja {
+        height: 2rem; /* Reducimos aún más el alto */
+        font-size: 14px; /* Disminuimos más el tamaño del texto */
+        width: 140%; /* Aumentamos un poco más el ancho */
+        left: -20%; /* Ajustamos la posición */
+        flex-wrap: nowrap;
+      }
+
+      .franja-1 {
+        top: 5px; /* Ajustamos la posición en pantallas muy pequeñas */
+      }
+
+      .franja-2 {
+        top: 30px; /* Ajustamos la posición en pantallas muy pequeñas */
+      }
+    }
+
+    #productos {
+      padding-bottom: 5rem;
+      padding-top: 0;
+    }
+
+    .section-main {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      background-image: url(../assets/img/bg-beerhouse.jpg); /* Imagen principal de fondo */
+      background-size: cover;
+      background-position: center;
+      color: white;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+      box-sizing: border-box;
+    }
+
+      /* Estilos generales */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+  
+      body {
+        font-family: Arial, sans-serif;
+      }
+  
+      /* Sección principal (imagen que cubre todo el ancho con texto) */
+      .main-section {
+        position: relative;
+        width: 100%;
+        height: 95vh; /* Ajusta el alto según sea necesario */
+        background-image: url('../assets/img/bg-beerhouse.jpg'); /* URL de la imagen principal */
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: white;
+      }
+  
+      .main-section-content {
+        position: relative;
+        z-index: 2; /* Para asegurarnos de que el contenido esté por encima de la imagen */
+      }
+  
+      .main-section h1 {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+      }
+  
+      .main-section p {
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+      }
+  
+
+  
+      /* Sección secundaria (superpuesta a la sección anterior) */
+      .overlay-section {
+        position: relative;
+        width: 85%; /* No ocupa todo el ancho */
+        margin: -100px auto 0; /* Se superpone a la sección anterior */
+        margin-bottom: 100px;
+        background-image: url('../assets/img/bg-reserva.png'); /* Imagen de fondo */
+        background-size: cover;
+        background-position: center;
+        padding: 4rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        color: black;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        border: 1px solid #A08044;
+        border-radius: 20px;
+      }
+  
+      .overlay-section .text-left {
+        max-width: 50%;
+      }
+  
+      .overlay-section h2 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        color: black;
+      }
+  
+      .overlay-section p {
+        font-size: 1.1rem;
+        margin-bottom: 2rem;
+      }
+  
+      .overlay-section .btn-reserve {
+        background-color: #FFECCA;
+        color: #101828;
+        padding: 1rem 2rem;
+        text-decoration: none;
+        border: 1px solid #101828;
+        border-radius: 20px;
+        font-size: 1rem;
+        border-radius: 5px;
+        position: absolute;
+        bottom: 45px;
+        right: 85px;
+      }
+  
+      /* Media queries para hacer todo responsive */
+      @media (max-width: 768px) {
+        .main-section h1 {
+          font-size: 2.5rem;
+        }
+  
+        .main-section p {
+          font-size: 1rem;
+        }
+  
+        .overlay-section {
+          width: 95%; /* Más ancho en pantallas pequeñas */
+          flex-direction: column; /* Para que los textos y el botón se apilen */
+          padding: 1rem;
+        }
+  
+        .overlay-section .text-left {
+          max-width: 100%;
+          margin-bottom: 2rem; /* Separación para el botón en pantallas pequeñas */
+        }
+  
+        .overlay-section h2 {
+          font-size: 2rem;
+        }
+  
+        .overlay-section p {
+          font-size: 1rem;
+        }
+  
+        .overlay-section .btn-reserve {
+          bottom: 10px;
+          right: 10px;
+          padding: 0.8rem 1.5rem;
+        }
+      }
+  
+      @media (max-width: 480px) {
+        .main-section h1 {
+          font-size: 2rem;
+        }
+  
+        .main-section p {
+          font-size: 0.9rem;
+        }
+  
+        .overlay-section {
+          width: 100%; /* Ocupa todo el ancho en pantallas muy pequeñas */
+        }
+  
+        .overlay-section .btn-reserve {
+          padding: 0.6rem 1.2rem;
+          font-size: 1rem;
+        }
+      }
+
+
+    /* Estilos para la columna izquierda */
+    .left-column-gastro {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .left-column-gastro h2 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+      color: white;
+    }
+
+    .left-column-gastro p {
+      font-size: 1rem;
+      margin-bottom: 15px;
+      color: white;
+    }
+
+
+    /* Estilos para la columna derecha con fotos */
+    .right-column-gastro {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row;
+    }
+
+    .right-column-gastro img {
+      width: 32%; /* Tres fotos con espacio entre ellas */
+      height: auto;
+      object-fit: cover;
+      border-radius: 20px;
+      border: 1px solid #A08044;
+    }
+
+    /* Responsive: en pantallas pequeñas, las fotos se apilan verticalmente */
+    @media (max-width: 768px) {
+      .right-column-gastro {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .right-column-gastro img {
+        width: 80%; /* Fotos más grandes en mobile */
+        margin-bottom: 10px; /* Espacio entre las fotos en mobile */
+      }
+    }
+
+
+        /* Estilos para la columna izquierda (texto y descripción) */
+        .left-column-deporte {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+        }
+    
+        .left-column-deporte h2 {
+          font-size: 2.5rem;
+          margin-bottom: 10px;
+        }
+    
+        .left-column-deporte p {
+          font-size: 1.1rem;
+          margin-bottom: 15px;
+          color: white;
+          line-height: 1.9rem;
+        }
+    
+        /* Estilos para la columna derecha (imagen) */
+        .right-column-deporte img {
+          width: 100%;
+          height: auto;
+          object-fit: cover;
+          border-radius: 5px;
+        }
+    
+        /* Responsive: en pantallas más pequeñas, el texto y la imagen se apilan */
+        @media (max-width: 768px) {
+          .right-column-deporte {
+            margin-top: 20px;
+          }
+        }
+
+          /* Estilos generales para el footer */
+    footer {
+      background-color: white;
+      color: #101828;
+      padding: 2rem;
+    }
+
+    .footer-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+    }
+
+    .footer-column {
+      flex: 1;
+      padding: 0 1rem;
+    }
+
+    /* Espaciado entre la primera y segunda columna más pequeño */
+    .footer-column:nth-child(2) {
+      margin-left: 1rem;
+    }
+
+    .footer-column:nth-child(3) {
+      margin-left: 3rem;
+    }
+
+    /* Estilos para los links */
+    .footer-column a {
+      color: #101828;
+      text-decoration: none;
+      display: block;
+      margin-bottom: 1rem;
+    }
+
+    .footer-column a:hover {
+      color: #DAB46C;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    /* Estilos para la columna de redes sociales */
+    .footer-column h3 {
+      margin-bottom: 1rem;
+      color: #101828;
+    }
+
+    .social-icons {
+      display: flex;
+      gap: 2.5rem;
+    }
+
+    .social-icons a {
+      color: #101828;
+      font-size: 1.5rem;
+    }
+
+    /* Línea divisoria */
+    .footer-divider {
+      width: 100%;
+      height: 0.1rem;
+      background-color: #101828;
+      margin: 2rem 0;
+    }
+
+    /* Estilos para la sección inferior */
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.9rem;
+      flex-wrap: wrap;
+    }
+
+    .footer-bottom img {
+      height: 40px;
+    }
+
+    /* Estilos responsivos */
+    @media (max-width: 768px) {
+      .footer-container {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .footer-column {
+        margin-bottom: 2rem;
+        padding: 0;
+        margin-left: 0 !important;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .footer-bottom img {
+        margin-top: 1rem;
+      }
+    }
+
+    /* FIN FOOTER */
+
+     /* Estilos del carrusel y las cards */
+     .product-carousel-tipos {
+      display: flex;
+      overflow: hidden;
+      scroll-behavior: smooth;
+      cursor: grab;
+    }
+
+    .product-carousel-tipos .product-card-tipos {
+      flex: 0 0 20%; /* Mostrar 5 tarjetas a la vez en pantallas grandes */
+      margin: 10px 10px;
+      background-image: url('../assets/img/bg-productos-c.jpg');
+      border-radius: 5px;
+      padding: 15px;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+      position: relative; /* Posicionar elementos internos relativamente */
+    }
+
+    .product-card-tipos img {
+      max-width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 5px;
+    }
+
+    .product-card-tipos h5 {
+      font-size: 1rem;
+      margin-top: 10px;
+      color: #101828;
+    }
+
+    .product-card-tipos .arrow {
+      font-size: 1.5rem;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      color: #101828;
+    }
+
+    /* Estilo del contenedor del carrusel */
+    .carousel-container-tipos {
+      position: relative;
+      width: 100%;
+    }
+
+    /* Flechas de navegación */
+    .carousel-controls {
+      text-align: center;
+      margin-top: 15px;
+    }
+
+    .carousel-controls button {
+      color: #DAB46C;
+      border: none;
+      padding: 10px 20px;
+      margin: 5px;
+      border-radius: 5px;
+      cursor: pointer;
+      --bs-btn-color: #DAB46C;
+      --bs-btn-border-color: #DAB46C;
+      --bs-btn-hover-color: #000;
+      --bs-btn-hover-bg: #DAB46C;
+      --bs-btn-hover-border-color: #DAB46C;
+      --bs-btn-focus-shadow-rgb: 248, 249, 250;
+      --bs-btn-active-color: #000;
+      --bs-btn-active-bg: #DAB46C;
+      --bs-btn-active-border-color: #DAB46C;
+      --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+      --bs-btn-disabled-color: #DAB46C;
+      --bs-btn-disabled-bg: transparent;
+      --bs-btn-disabled-border-color: #DAB46C;
+      --bs-gradient: none;
+    }
+
+    /* Responsive: Mostrar solo 1 card en mobile */
+    @media (max-width: 768px) {
+      .product-carousel-tipos .product-card-tipos {
+        flex: 0 0 100%; /* Mostrar una tarjeta a la vez en pantallas pequeñas */
+      }
+    }
+    /* FIN carrusel productos */
+
+
+    /* FIN Estilo personalizado VIR */
+
+    .text-end {
+      text-align: right !important;
+    }
+
 .display-1 {
   font-family: "IBMPlexSans", sans-serif;
   font-size: 2.2rem;
@@ -658,13 +1337,12 @@ progress {
 }
 
 .display-2 {
-  font-size: calc(1.575rem + 3.9vw);
-  font-weight: 300;
+  font-size: calc(1.575rem + 3vw);
   line-height: 1.2;
 }
 @media (min-width: 1200px) {
   .display-2 {
-    font-size: 4.5rem;
+    font-size: 3.5rem;
   }
 }
 
@@ -11023,13 +11701,18 @@ section {
   padding-bottom: 0rem;
 }
 
+aside.historia-beerhouse {
+  padding-top: 5rem;
+  padding-bottom: 13rem;
+}
+
 .app-badge {
   height: 3rem;
 }
 
 #mainNav {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
   background-color: #1F1E21;
 }
 #mainNav .navbar-brand {
@@ -11045,7 +11728,7 @@ section {
 }
 #mainNav .navbar-nav .nav-item .nav-link {
   color: white;
-  font-size: 0.8rem;
+  font-size: 1rem;
 }
 #mainNav .navbar-nav .nav-item .nav-link:hover {
   color: #DAB46C;
@@ -11247,10 +11930,23 @@ footer a:hover, footer a:active, footer a:focus {
 }
 
 .masthead {
-  background-image: url(../assets/img/hero-1.jpg);
+  background-image: url(../assets/img/hero-2.jpg);
   padding-top: 9.5rem;
   padding-bottom: 20rem;
 }
+
+ .beerhouse {
+  background-image: url(../assets/img/beerhouse.jpg);
+  padding-top: 9.5rem;
+  padding-bottom: 20rem;
+}
+
+.historia {
+  background-image: url(../assets/img/hero-2.jpg);
+  padding-top: 9.5rem;
+  padding-bottom: 20rem;
+}
+
 .masthead .masthead-device-mockup {
   display: flex;
   align-items: center;

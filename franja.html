@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sección con Texto e Imagen</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    /* Estilos para la columna izquierda (texto y descripción) */
+    .left-column-deporte {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .left-column-deporte h2 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    .left-column-deporte p {
+      font-size: 1rem;
+      margin-bottom: 15px;
+    }
+
+    /* Estilos para la columna derecha (imagen) */
+    .right-column-deporte img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      border-radius: 5px;
+    }
+
+    /* Responsive: en pantallas más pequeñas, el texto y la imagen se apilan */
+    @media (max-width: 768px) {
+      .right-column-deporte {
+        margin-top: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container mt-5">
+    <div class="row">
+      <!-- Columna izquierda con texto y descripción -->
+      <div class="col-md-6 left-column-deporte">
+        <h2>Título de la Sección</h2>
+        <p>Descripción breve sobre el contenido que se muestra en esta sección. Puedes usar este espacio para destacar información importante.</p>
+      </div>
+
+      <!-- Columna derecha con imagen -->
+      <div class="col-md-6 right-column-deporte">
+        <img src="https://via.placeholder.com/500x300" alt="Imagen descriptiva">
+      </div>
+    </div>
+  </div>
+
+  <!-- Script de Bootstrap y jQuery -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
