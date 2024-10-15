@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Validación de Edad</title>
+  <!-- CSS de Bootstrap -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #1F1E21;
+      color: white;
+    }
+    .age-gate {
+      max-width: 400px;
+      padding: 20px;
+      background-color: #1F1E21;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    #warning {
+      color: red;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <!-- Formulario de validación de edad -->
+  <div class="age-gate">
+    <h3 class="text-center">Validación de Edad</h3>
+    <p class="text-center">Debes tener al menos 18 años para ingresar a este sitio.</p>
+    
+    <div class="form-group">
+      <label for="dob">Ingresa tu fecha de nacimiento:</label>
+      <input type="date" class="form-control" id="dob" required>
+    </div>
+    
+    <button class="btn btn-primary btn-block" onclick="validateAge()">Verificar</button>
+    
+    <p id="warning" class="text-center mt-3">Lo siento, debes tener al menos 18 años para acceder.</p>
+  </div>
+
+  <!-- Scripts de Bootstrap y JavaScript -->
+  <script>
+    function validateAge() {
+      var dob = new Date(document.getElementById('dob').value);
+      var today = new Date();
+      
+      // Cálculo de la diferencia de edad
+      var age = today.getFullYear() - dob.getFullYear();
+      var monthDifference = today.getMonth() - dob.getMonth();
+      
+      if (monthDifference < 0 || (monthDifference === 0 && today.getDate() < dob.getDate())) {
+        age--;
+      }
+
+      // Validación de si tiene 18 años o más
+      if (age >= 18) {
+        window.location.href = "index.html"; // Redireccionar a la página de contenido
+      } else {
+        document.getElementById('warning').style.display = 'block';
+      }
+    }
+  </script>
+</body>
+</html>
